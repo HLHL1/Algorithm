@@ -1,3 +1,27 @@
+/*
+
+给定一个无序数组，包含正数、负数和0，要求从中找出3个数的乘积，使得乘积最大，要求时间复杂度：O(n)，空间复杂度：O(1)
+输入描述:
+无序整数数组A[n]
+输出描述:
+满足条件的最大乘积
+示例1
+输入
+3 4 1 2
+输出
+24
+
+*/
+
+/*
+题解：这个题难点就在在时间和空间复杂度的掌控上，不可以排序，所以我们只能利用5个变量来保存最大最小值
+      分两种情况：
+               1.如果全为正或者全为负，最大积都是三个最大值的乘积
+               2.如果一半正数或者一半负数,值为三个最大值乘积或者，最小的两个负数和最大的一个正数乘积
+*/
+
+
+
 package hhh.Test;
 
 import java.util.Scanner;
@@ -43,35 +67,4 @@ public class Main{
         System.out.println(ans);
     }
 }
-
-//    public static int MAX=10000000;
-//    public static int n;
-//    public static int[] a=new int[505];
-//    public static void main(String[] args){
-//        Scanner cin=new Scanner(System.in);
-//        n=cin.nextInt();
-//        for(int i=0;i<n;i++){
-//            a[i]=cin.nextInt();
-//        }
-//        int ans=0;
-//        for(int i=0;i<n;i++){
-//            for(int j=i+1;j<n;j++){
-//                for(int k=j+1;k<n;k++){
-//                    int num=0;
-//                    if((num=a[i]*a[j])>=MAX)continue;
-//                    else if((num*=a[k])>=MAX)continue;
-//                    else if(If(num)) ans++;
-//                }
-//            }
-//        }
-//        System.out.println(ans);
-//    }
-//    public static boolean If(int num){
-//        for(int i=0;i<n;i++){
-//            if(a[i]==num){
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
 
